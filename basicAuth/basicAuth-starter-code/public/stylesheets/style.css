@@ -69,11 +69,13 @@ ul {
   list-style-type: none;
 }
 
-#to-right li {
+ul li {
+  line-height: 20px;
+}
+
+#to-right {
   display: inline;
-  padding: 0 1.5em;
-  border-left: 2px solid #43a3e6;
-  line-height: 30px;
+  padding: 1em;
 }
 
 #to-right {
@@ -89,8 +91,8 @@ ul {
   float: left;
 }
 
-#to-left p {
+#to-left p a {
+  color: #000;
   font-weight: bold;
   font-size: 2em;
-  margin: 0;
 }
