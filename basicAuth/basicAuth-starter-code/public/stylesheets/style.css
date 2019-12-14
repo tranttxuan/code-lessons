@@ -74,11 +74,7 @@ ul li {
 }
 
 #to-right {
-  display: inline;
   padding: 1em;
-}
-
-#to-right {
   float: right;
 }
 
