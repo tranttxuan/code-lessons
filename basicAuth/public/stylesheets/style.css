@@ -78,6 +78,11 @@ ul li {
   float: right;
 }
 
+#to-right span {
+  color: #43a3e6;
+  font-size: 1.5em;
+}
+
 #form h2 {
   display: flex;
   justify-content: center;
