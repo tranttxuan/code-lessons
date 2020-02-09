@@ -72,7 +72,7 @@ router.get('/login', (req, res) => res.render('auth/login'));
 
 // .post() login route ==> to process form data
 router.post('/login', (req, res, next) => {
-  console.log('SESSION =====> ', req.session);
+  // console.log('SESSION =====> ', req.session);
   const { email, password } = req.body;
 
   if (email === '' || password === '') {
@@ -101,10 +101,18 @@ router.post('/login', (req, res, next) => {
     .catch(error => next(error));
 });
 
+////////////////////////////////////////////////////////////////////////
+///////////////////////////// LOGOUT ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+router.post('/logout', (req, res) => {
+  req.session.destroy();
+  res.redirect('/');
+});
 // router.get('/userProfile', (req, res) => res.render('users/user-profile'));
 
 router.get('/userProfile', (req, res) => {
-  console.log('your sess exp: ', req.session.cookie.expires);
+  // console.log('your sess exp: ', req.session.cookie.expires);
   res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 

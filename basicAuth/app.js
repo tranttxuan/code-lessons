@@ -22,10 +22,10 @@ const app = express();
 //                                   |
 // use session here:                 V
 require('./configs/session.config')(app);
-//                       ^
-//                       |
-// the "app" that gets passed here
-// is the previously defined Express app (const app = express();)
+//                                    ^
+//                                    |
+//        the "app" that gets passed here
+//        is the previously defined Express app (const app = express();)
 
 // Express View engine setup
 

@@ -3,9 +3,10 @@
 // require session
 const session = require('express-session');
 
-// require mongostore
+// ADDED: require mongostore
 const MongoStore = require('connect-mongo')(session);
 
+// ADDED: require mongoose
 const mongoose = require('mongoose');
 
 // since we are going to USE this middleware in the app.js,
