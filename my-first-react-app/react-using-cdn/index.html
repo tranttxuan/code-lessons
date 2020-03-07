@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@16.13.0/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <title>Hello World Ironhackers!</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- <div class="container">
+        <h1>Are you React-ing Ironhackers?</h1>
+        <h3>Time now is: {{ TIME_NOW }}</h3>
+      </div> -->
+    </div>
+
+    <script type="text/babel">
+      const root = document.getElementById('root');
+      // const mainHeading = document.createElement('h1');
+      // mainHeading.textContent = 'Hello there Ironhackers! ';
+      // root.appendChild(mainHeading);
+
+      // const element = React.createElement('div', {
+      //   className: 'container',
+      //   children: [
+      //     React.createElement('h1', {
+      //       children: 'Are you React-ing Ironhackers?'
+      //     }),
+      //     React.createElement('h3', {
+      //       children: [
+      //         'Time now is: ',
+      //         `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+      //       ]
+      //     })
+      //   ]
+      // });
+
+      const element = (
+        <div className='container'>
+          <h1>Are you React-ing Ironhackers?</h1>
+          <h3>
+            Time now is: {new Date().getHours()}:{new Date().getMinutes()}:{new Date().getSeconds()}
+          </h3>
+        </div>
+      );
+
+      ReactDOM.render(element, root);
+    </script>
+  </body>
+</html>
